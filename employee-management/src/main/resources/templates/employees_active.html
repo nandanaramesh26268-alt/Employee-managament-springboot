@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Active Employees</title>
+</head>
+<body>
+
+<h2>✅ Active Employees</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Status</th>
+    </tr>
+
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.department}"></td>
+        <td th:text="${emp.status}"></td>
+    </tr>
+</table>
+
+<br>
+<a href="/admin/dashboard">⬅ Back to Dashboard</a>
+
+</body>
+</html>

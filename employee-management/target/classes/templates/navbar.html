@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="navbar">
+    <nav style="background:#111827; padding:12px; color:white;">
+        <b>Employee Management System</b>
+
+        <span style="margin-left:30px;">
+            <a href="/admin/dashboard" style="color:white; margin-right:15px;">Dashboard</a>
+            <a href="/employees/new" style="color:white; margin-right:15px;">Add Employee</a>
+            <a href="/employees" style="color:white; margin-right:15px;">Manage Employees</a>
+        </span>
+
+        <span style="float:right;">
+            <a href="/logout" style="color:white;">Logout</a>
+        </span>
+    </nav>
+</div>
+
+</body>
+</html>

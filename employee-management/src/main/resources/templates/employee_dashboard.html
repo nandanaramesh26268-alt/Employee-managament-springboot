@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee Dashboard</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f9fafb;
+        }
+
+        .navbar {
+            background: #2563eb;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .profile-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+
+        .profile-card h3 {
+            margin-bottom: 20px;
+            color: #1f2937;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .actions {
+            margin-top: 25px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .actions a {
+            padding: 10px 15px;
+            background: #2563eb;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .actions a:hover {
+            background: #1e40af;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div>Employee Portal</div>
+    <div>
+        <a href="/employee/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <h2>Welcome 👋</h2>
+
+    <div class="profile-card">
+        <h3>My Profile</h3>
+
+        <table>
+            <tr>
+                <td><b>Name</b></td>
+                <td th:text="${employee.name}"></td>
+            </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td th:text="${employee.email}"></td>
+            </tr>
+            <tr>
+                <td><b>Department</b></td>
+                <td th:text="${employee.department}"></td>
+            </tr>
+            <tr>
+                <td><b>Status</b></td>
+                <td th:text="${employee.status}"></td>
+            </tr>
+        </table>
+
+        <div class="actions">
+            <a href="#">Edit Profile</a>
+            <a href="#">Mark Attendance</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

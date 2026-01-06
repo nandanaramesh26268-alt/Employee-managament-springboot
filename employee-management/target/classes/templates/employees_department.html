@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Department Wise Employees</title>
+</head>
+<body>
+
+<h2>🏢 Department-wise Employees</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Employee Name</th>
+        <th>Department</th>
+    </tr>
+
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.department}"></td>
+    </tr>
+</table>
+
+<br>
+<a href="/admin/dashboard">⬅ Back to Dashboard</a>
+
+</body>
+</html>
